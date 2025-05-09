@@ -1,6 +1,6 @@
 ﻿namespace ECommerce.Models;
 
-public class Category : Entity<int>
+public class Category : Entity<Guid>
 {
     public string Name { get; set; }
 

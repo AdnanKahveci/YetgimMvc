@@ -13,6 +13,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<ICategoryRepository,EfCategoryRepository>();
 builder.Services.AddScoped<IProductRepository,EfProductRepository>();
 builder.Services.AddDbContext<BaseDbContext>();
 
