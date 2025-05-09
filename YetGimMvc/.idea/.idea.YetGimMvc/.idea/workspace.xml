@@ -12,7 +12,51 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="470abd8e-3483-45f8-aa15-5ff183997376" name="Changes" comment="" />
+    <list default="true" id="470abd8e-3483-45f8-aa15-5ff183997376" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ECommerce/Services/Concretes/ProductService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.YetGimMvc/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.YetGimMvc/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/Controllers/ProductController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/Controllers/ProductController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/DataAccess/Abstracts/IProductRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/DataAccess/Abstracts/IProductRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/DataAccess/Concretes/EfProductRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/DataAccess/Concretes/EfProductRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/DataAccess/Contexts/BaseDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/DataAccess/Contexts/BaseDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/ECommerce.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/ECommerce.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/Migrations/BaseDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/Migrations/BaseDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/Models/Category.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/Models/Category.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/Models/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/Models/Entity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/Models/Product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/Models/Product.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/bin/Debug/net8.0/ECommerce.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/bin/Debug/net8.0/ECommerce.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/bin/Debug/net8.0/ECommerce.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/bin/Debug/net8.0/ECommerce.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/bin/Debug/net8.0/ECommerce.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/bin/Debug/net8.0/ECommerce.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/bin/Debug/net8.0/ECommerce.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/bin/Debug/net8.0/ECommerce.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/bin/Debug/net8.0/ECommerce.staticwebassets.runtime.json" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/bin/Debug/net8.0/ECommerce.staticwebassets.runtime.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/ECommerce.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/ECommerce.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/ECommerce.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/ECommerce.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/ECommerce.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/ECommerce.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/ECommerce.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/ECommerce.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/ECommerce.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/ECommerce.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/ECommerce.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/ECommerce.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/ECommerce.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/ECommerce.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/ECommerce.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/ECommerce.genruntimeconfig.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/ECommerce.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/ECommerce.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/ref/ECommerce.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/ref/ECommerce.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/refint/ECommerce.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/refint/ECommerce.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/staticwebassets.build.json" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/staticwebassets.build.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/staticwebassets.development.json" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/staticwebassets.development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/staticwebassets.pack.json" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/staticwebassets.pack.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/obj/ECommerce.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/obj/ECommerce.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YetGimMvc/obj/Debug/net8.0/YetGimMvc.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/YetGimMvc/obj/Debug/net8.0/YetGimMvc.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YetGimMvc/obj/Debug/net8.0/YetGimMvc.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/YetGimMvc/obj/Debug/net8.0/YetGimMvc.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YetGimMvc/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/YetGimMvc/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YetGimMvc/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/YetGimMvc/obj/rider.project.restore.info" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,6 +75,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Users/Pendik/Desktop/MVC/YetGimMvc/ECommerce/Controllers/ProductController.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -39,27 +91,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.ECommerce: http.executor": "Run",
-    ".NET Launch Settings Profile.YetGimMvc: IIS Express.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.ECommerce: http.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Launch Settings Profile.YetGimMvc: IIS Express.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.tabs&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "sqlserver.localdb",
-      "sqlserver"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;sqlserver.localdb&quot;,
+      &quot;sqlserver&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.ECommerce: http">
     <configuration name="ECommerce: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/ECommerce/ECommerce.csproj" />
@@ -163,7 +217,8 @@
       <workItem from="1746598826435" duration="2039000" />
       <workItem from="1746603931750" duration="3991000" />
       <workItem from="1746608720782" duration="2954000" />
-      <workItem from="1746771917823" duration="5497000" />
+      <workItem from="1746771917823" duration="8543000" />
+      <workItem from="1746781249176" duration="5000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -173,17 +228,53 @@
       <option name="project" value="LOCAL" />
       <updated>1746777870948</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="a">
+      <option name="closed" value="true" />
+      <created>1746778090942</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1746778090942</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/main" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="a" />
+    <option name="LAST_COMMIT_MESSAGE" value="a" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -202,5 +293,9 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

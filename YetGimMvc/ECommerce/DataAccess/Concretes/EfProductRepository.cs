@@ -1,32 +1,48 @@
-﻿using ECommerce.DataAccess.Abstracts;
+﻿using ECommerce.DataAccess.abstracts;
+using ECommerce.DataAccess.Contexts;
 using ECommerce.Models;
 
 namespace ECommerce.DataAccess.Concretes;
 
 public class EfProductRepository : IProductRepository
 {
+    private BaseDbContext _context;
+
+    public EfProductRepository(BaseDbContext context)
+    {
+        _context = context;
+    }
+    
+    
     public void Add(Product product)
     {
-        throw new NotImplementedException();
+        product.CreatedTime = DateTime.Now;
+        _context.Products.Add(product);
+        _context.SaveChanges();
     }
 
     public void Update(Product product)
     {
-        throw new NotImplementedException();
+        product.UpdatedTime = DateTime.Now;
+        _context.Products.Update(product);
+        _context.SaveChanges();
     }
 
     public void Delete(Product product)
     {
-        throw new NotImplementedException();
+        product.CreatedTime = DateTime.Now;
+        _context.Products.Remove(product);
+        _context.SaveChanges();
     }
 
     public List<Product> GetAll()
     {
-        throw new NotImplementedException();
+        return _context.Products.ToList();
     }
 
-    public Product? GetById(int id)
+    public Product? GetById(Guid id)
     {
-        throw new NotImplementedException();
+        return _context.Products.Find(id);
     }
+    
 }

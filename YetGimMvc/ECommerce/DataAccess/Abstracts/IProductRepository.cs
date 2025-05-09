@@ -1,6 +1,6 @@
 ﻿using ECommerce.Models;
 
-namespace ECommerce.DataAccess.Abstracts;
+namespace ECommerce.DataAccess.abstracts;
 
 public interface IProductRepository
 {
@@ -8,5 +8,5 @@ public interface IProductRepository
     void Update(Product product);
     void Delete(Product product);
     List<Product> GetAll();
-    Product? GetById(int id);
+    Product? GetById(Guid id);
 }

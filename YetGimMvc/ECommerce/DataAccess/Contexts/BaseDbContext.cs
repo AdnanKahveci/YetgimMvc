@@ -1,16 +1,18 @@
 ﻿using ECommerce.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace ECommerce.DataAccess.Contexts;
-
-public class BaseDbContext : DbContext
+namespace ECommerce.DataAccess.Contexts
 {
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    public class BaseDbContext : DbContext
     {
-        optionsBuilder.UseSqlServer(connectionString: "Server=DESKTOP-JH4RF0R\\SQLEXPRESS;Initial Catalog=ECommerceDB;Integrated Security=True;TrustServerCertificate=True;");
-    }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer(
+                "Server= localhost,1433 ;Database=ECommerceDB;User=sa;Password=Password123*;TrustServerCertificate=True;"
+            );
+        }
 
-    public DbSet<Product> Products { get; set; }
-    public DbSet<Category> Categories { get; set; }
-    
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; }
+    }
 }
