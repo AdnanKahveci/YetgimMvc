@@ -1,0 +1,113 @@
+Index: ECommerce/DataAccess/Concretes/EfProductRepository.cs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>using ECommerce.DataAccess.Abstracts;\r\nusing ECommerce.Models;\r\n\r\nnamespace ECommerce.DataAccess.Concretes;\r\n\r\npublic class EfProductRepository : IProductRepository\r\n{\r\n    public void Add(Product product)\r\n    {\r\n        throw new NotImplementedException();\r\n    }\r\n\r\n    public void Update(Product product)\r\n    {\r\n        throw new NotImplementedException();\r\n    }\r\n\r\n    public void Delete(Product product)\r\n    {\r\n        throw new NotImplementedException();\r\n    }\r\n\r\n    public List<Product> GetAll()\r\n    {\r\n        throw new NotImplementedException();\r\n    }\r\n\r\n    public Product? GetById(int id)\r\n    {\r\n        throw new NotImplementedException();\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/ECommerce/DataAccess/Concretes/EfProductRepository.cs b/ECommerce/DataAccess/Concretes/EfProductRepository.cs
+--- a/ECommerce/DataAccess/Concretes/EfProductRepository.cs	(revision 559d053d576c0d0bf74b002204f5df26b8729706)
++++ b/ECommerce/DataAccess/Concretes/EfProductRepository.cs	(date 1746779480424)
+@@ -1,18 +1,29 @@
+ using ECommerce.DataAccess.Abstracts;
++using ECommerce.DataAccess.Contexts;
+ using ECommerce.Models;
+ 
+ namespace ECommerce.DataAccess.Concretes;
+ 
+ public class EfProductRepository : IProductRepository
+ {
++    private readonly BaseDbContext _context;
++
++    public EfProductRepository(BaseDbContext context)
++    {
++        _context=context;
++    }
+     public void Add(Product product)
+     {
+-        throw new NotImplementedException();
++        product.CreatedAt = DateTime.Now;
++        _context.Products.Add(product);
++        _context.SaveChanges();
+     }
+ 
+     public void Update(Product product)
+     {
+-        throw new NotImplementedException();
++        product.UpdatedAt = DateTime.Now;
++        _context.Products.Update(product);
++        _context.SaveChanges();
+     }
+ 
+     public void Delete(Product product)
+Index: ECommerce/Controllers/ProductController.cs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>using ECommerce.DataAccess.Contexts;\r\nusing ECommerce.Models;\r\nusing Microsoft.AspNetCore.Mvc;\r\n\r\nnamespace ECommerce.Controllers;\r\n\r\npublic class ProductController : Controller\r\n{\r\n    BaseDbContext context = new BaseDbContext();\r\n    // GET\r\n    public IActionResult Index()\r\n    {\r\n        List<Product> products = context.Products.ToList();\r\n        return View(products);\r\n    }\r\n}\r\n\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/ECommerce/Controllers/ProductController.cs b/ECommerce/Controllers/ProductController.cs
+--- a/ECommerce/Controllers/ProductController.cs	(revision 559d053d576c0d0bf74b002204f5df26b8729706)
++++ b/ECommerce/Controllers/ProductController.cs	(date 1746778106803)
+@@ -13,7 +13,4 @@
+         List<Product> products = context.Products.ToList();
+         return View(products);
+     }
+-}
+-
+-
+-
++}
+\ No newline at end of file
+Index: ECommerce/Program.cs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>using ECommerce.DataAccess.Contexts;\r\n\r\nvar builder = WebApplication.CreateBuilder(args);\r\n\r\n// Add services to the container.\r\nbuilder.Services.AddControllersWithViews();\r\nbuilder.Services.AddDbContext<BaseDbContext>();\r\nvar app = builder.Build();\r\n\r\n// Configure the HTTP request pipeline.\r\nif (!app.Environment.IsDevelopment())\r\n{\r\n    app.UseExceptionHandler(\"/Home/Error\");\r\n    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.\r\n    app.UseHsts();\r\n}\r\n\r\napp.UseHttpsRedirection();\r\napp.UseStaticFiles();\r\n\r\napp.UseRouting();\r\n\r\napp.UseAuthorization();\r\n\r\napp.MapControllerRoute(\r\n    name: \"default\",\r\n    pattern: \"{controller=Home}/{action=Index}/{id?}\");\r\n\r\napp.Run();
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/ECommerce/Program.cs b/ECommerce/Program.cs
+--- a/ECommerce/Program.cs	(revision 559d053d576c0d0bf74b002204f5df26b8729706)
++++ b/ECommerce/Program.cs	(date 1746779480428)
+@@ -2,9 +2,14 @@
+ 
+ var builder = WebApplication.CreateBuilder(args);
+ 
++
++// AddSingleton<IProductRepository, EfProductRepository>();
++//AddScopped(): Request Respond Scope
++//AddTransient(): Request Scope
+ // Add services to the container.
+ builder.Services.AddControllersWithViews();
+ builder.Services.AddDbContext<BaseDbContext>();
++
+ var app = builder.Build();
+ 
+ // Configure the HTTP request pipeline.
+Index: .idea/.idea.YetGimMvc/.idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoGeneratedRunConfigurationManager\">\r\n    <projectFile profileName=\"IIS Express\">ECommerce/ECommerce.csproj</projectFile>\r\n    <projectFile profileName=\"http\">ECommerce/ECommerce.csproj</projectFile>\r\n    <projectFile profileName=\"https\">ECommerce/ECommerce.csproj</projectFile>\r\n    <projectFile profileName=\"IIS Express\">YetGimMvc/YetGimMvc.csproj</projectFile>\r\n    <projectFile profileName=\"http\">YetGimMvc/YetGimMvc.csproj</projectFile>\r\n    <projectFile profileName=\"https\">YetGimMvc/YetGimMvc.csproj</projectFile>\r\n  </component>\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"470abd8e-3483-45f8-aa15-5ff183997376\" name=\"Changes\" comment=\"\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"DpaMonitoringSettings\">\r\n    <option name=\"firstShow\" value=\"false\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"JSON File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$/..\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 7\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2wfRmFYZascyY4TibSRusoLTqj9\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \".NET Launch Settings Profile.ECommerce: http.executor\": \"Run\",\r\n    \".NET Launch Settings Profile.YetGimMvc: IIS Express.executor\": \"Run\",\r\n    \"ModuleVcsDetector.initialDetectionPerformed\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"git-widget-placeholder\": \"master\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"nodejs_package_manager_path\": \"npm\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  },\r\n  \"keyToStringList\": {\r\n    \"DatabaseDriversLRU\": [\r\n      \"sqlserver.localdb\",\r\n      \"sqlserver\"\r\n    ]\r\n  }\r\n}]]></component>\r\n  <component name=\"RunManager\" selected=\".NET Launch Settings Profile.ECommerce: http\">\r\n    <configuration name=\"ECommerce: IIS Express\" type=\"LaunchSettings\" factoryName=\".NET Launch Settings Profile\">\r\n      <option name=\"LAUNCH_PROFILE_PROJECT_FILE_PATH\" value=\"$PROJECT_DIR$/ECommerce/ECommerce.csproj\" />\r\n      <option name=\"LAUNCH_PROFILE_TFM\" value=\"net8.0\" />\r\n      <option name=\"LAUNCH_PROFILE_NAME\" value=\"IIS Express\" />\r\n      <option name=\"USE_EXTERNAL_CONSOLE\" value=\"0\" />\r\n      <option name=\"USE_MONO\" value=\"0\" />\r\n      <option name=\"RUNTIME_ARGUMENTS\" value=\"\" />\r\n      <option name=\"GENERATE_APPLICATIONHOST_CONFIG\" value=\"1\" />\r\n      <option name=\"SHOW_IIS_EXPRESS_OUTPUT\" value=\"0\" />\r\n      <option name=\"SEND_DEBUG_REQUEST\" value=\"1\" />\r\n      <option name=\"ADDITIONAL_IIS_EXPRESS_ARGUMENTS\" value=\"\" />\r\n      <method v=\"2\">\r\n        <option name=\"Build\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"ECommerce: http\" type=\"LaunchSettings\" factoryName=\".NET Launch Settings Profile\">\r\n      <option name=\"LAUNCH_PROFILE_PROJECT_FILE_PATH\" value=\"$PROJECT_DIR$/ECommerce/ECommerce.csproj\" />\r\n      <option name=\"LAUNCH_PROFILE_TFM\" value=\"net8.0\" />\r\n      <option name=\"LAUNCH_PROFILE_NAME\" value=\"http\" />\r\n      <option name=\"USE_EXTERNAL_CONSOLE\" value=\"0\" />\r\n      <option name=\"USE_MONO\" value=\"0\" />\r\n      <option name=\"RUNTIME_ARGUMENTS\" value=\"\" />\r\n      <option name=\"GENERATE_APPLICATIONHOST_CONFIG\" value=\"1\" />\r\n      <option name=\"SHOW_IIS_EXPRESS_OUTPUT\" value=\"0\" />\r\n      <option name=\"SEND_DEBUG_REQUEST\" value=\"1\" />\r\n      <option name=\"ADDITIONAL_IIS_EXPRESS_ARGUMENTS\" value=\"\" />\r\n      <method v=\"2\">\r\n        <option name=\"Build\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"ECommerce: https\" type=\"LaunchSettings\" factoryName=\".NET Launch Settings Profile\">\r\n      <option name=\"LAUNCH_PROFILE_PROJECT_FILE_PATH\" value=\"$PROJECT_DIR$/ECommerce/ECommerce.csproj\" />\r\n      <option name=\"LAUNCH_PROFILE_TFM\" value=\"net8.0\" />\r\n      <option name=\"LAUNCH_PROFILE_NAME\" value=\"https\" />\r\n      <option name=\"USE_EXTERNAL_CONSOLE\" value=\"0\" />\r\n      <option name=\"USE_MONO\" value=\"0\" />\r\n      <option name=\"RUNTIME_ARGUMENTS\" value=\"\" />\r\n      <option name=\"GENERATE_APPLICATIONHOST_CONFIG\" value=\"1\" />\r\n      <option name=\"SHOW_IIS_EXPRESS_OUTPUT\" value=\"0\" />\r\n      <option name=\"SEND_DEBUG_REQUEST\" value=\"1\" />\r\n      <option name=\"ADDITIONAL_IIS_EXPRESS_ARGUMENTS\" value=\"\" />\r\n      <method v=\"2\">\r\n        <option name=\"Build\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"YetGimMvc: IIS Express\" type=\"LaunchSettings\" factoryName=\".NET Launch Settings Profile\">\r\n      <option name=\"LAUNCH_PROFILE_PROJECT_FILE_PATH\" value=\"$PROJECT_DIR$/YetGimMvc/YetGimMvc.csproj\" />\r\n      <option name=\"LAUNCH_PROFILE_TFM\" value=\"net8.0\" />\r\n      <option name=\"LAUNCH_PROFILE_NAME\" value=\"IIS Express\" />\r\n      <option name=\"USE_EXTERNAL_CONSOLE\" value=\"0\" />\r\n      <option name=\"USE_MONO\" value=\"0\" />\r\n      <option name=\"RUNTIME_ARGUMENTS\" value=\"\" />\r\n      <option name=\"GENERATE_APPLICATIONHOST_CONFIG\" value=\"1\" />\r\n      <option name=\"SHOW_IIS_EXPRESS_OUTPUT\" value=\"0\" />\r\n      <option name=\"SEND_DEBUG_REQUEST\" value=\"1\" />\r\n      <option name=\"ADDITIONAL_IIS_EXPRESS_ARGUMENTS\" value=\"\" />\r\n      <method v=\"2\">\r\n        <option name=\"Build\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"YetGimMvc: http\" type=\"LaunchSettings\" factoryName=\".NET Launch Settings Profile\">\r\n      <option name=\"LAUNCH_PROFILE_PROJECT_FILE_PATH\" value=\"$PROJECT_DIR$/YetGimMvc/YetGimMvc.csproj\" />\r\n      <option name=\"LAUNCH_PROFILE_TFM\" value=\"net8.0\" />\r\n      <option name=\"LAUNCH_PROFILE_NAME\" value=\"http\" />\r\n      <option name=\"USE_EXTERNAL_CONSOLE\" value=\"0\" />\r\n      <option name=\"USE_MONO\" value=\"0\" />\r\n      <option name=\"RUNTIME_ARGUMENTS\" value=\"\" />\r\n      <option name=\"GENERATE_APPLICATIONHOST_CONFIG\" value=\"1\" />\r\n      <option name=\"SHOW_IIS_EXPRESS_OUTPUT\" value=\"0\" />\r\n      <option name=\"SEND_DEBUG_REQUEST\" value=\"1\" />\r\n      <option name=\"ADDITIONAL_IIS_EXPRESS_ARGUMENTS\" value=\"\" />\r\n      <method v=\"2\">\r\n        <option name=\"Build\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"YetGimMvc: https\" type=\"LaunchSettings\" factoryName=\".NET Launch Settings Profile\">\r\n      <option name=\"LAUNCH_PROFILE_PROJECT_FILE_PATH\" value=\"$PROJECT_DIR$/YetGimMvc/YetGimMvc.csproj\" />\r\n      <option name=\"LAUNCH_PROFILE_TFM\" value=\"net8.0\" />\r\n      <option name=\"LAUNCH_PROFILE_NAME\" value=\"https\" />\r\n      <option name=\"USE_EXTERNAL_CONSOLE\" value=\"0\" />\r\n      <option name=\"USE_MONO\" value=\"0\" />\r\n      <option name=\"RUNTIME_ARGUMENTS\" value=\"\" />\r\n      <option name=\"GENERATE_APPLICATIONHOST_CONFIG\" value=\"1\" />\r\n      <option name=\"SHOW_IIS_EXPRESS_OUTPUT\" value=\"0\" />\r\n      <option name=\"SEND_DEBUG_REQUEST\" value=\"1\" />\r\n      <option name=\"ADDITIONAL_IIS_EXPRESS_ARGUMENTS\" value=\"\" />\r\n      <method v=\"2\">\r\n        <option name=\"Build\" />\r\n      </method>\r\n    </configuration>\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"470abd8e-3483-45f8-aa15-5ff183997376\" name=\"Changes\" comment=\"\" />\r\n      <created>1746430799371</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1746430799371</updated>\r\n      <workItem from=\"1746430800605\" duration=\"6692000\" />\r\n      <workItem from=\"1746598826435\" duration=\"2039000\" />\r\n      <workItem from=\"1746603931750\" duration=\"3991000\" />\r\n      <workItem from=\"1746608720782\" duration=\"2954000\" />\r\n      <workItem from=\"1746771917823\" duration=\"5497000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"first commit\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1746777870948</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1746777870948</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"2\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"UnityProjectConfiguration\" hasMinimizedUI=\"false\" />\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <option name=\"CLEAR_INITIAL_COMMIT_MESSAGE\" value=\"true\" />\r\n    <MESSAGE value=\"first commit\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"first commit\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <breakpoint enabled=\"true\" type=\"DotNet_Exception_Breakpoints\">\r\n          <properties exception=\"System.OperationCanceledException\" breakIfHandledByOtherCode=\"false\" displayValue=\"System.OperationCanceledException\" />\r\n          <option name=\"timeStamp\" value=\"1\" />\r\n        </breakpoint>\r\n        <breakpoint enabled=\"true\" type=\"DotNet_Exception_Breakpoints\">\r\n          <properties exception=\"System.Threading.Tasks.TaskCanceledException\" breakIfHandledByOtherCode=\"false\" displayValue=\"System.Threading.Tasks.TaskCanceledException\" />\r\n          <option name=\"timeStamp\" value=\"2\" />\r\n        </breakpoint>\r\n        <breakpoint enabled=\"true\" type=\"DotNet_Exception_Breakpoints\">\r\n          <properties exception=\"System.Threading.ThreadAbortException\" breakIfHandledByOtherCode=\"false\" displayValue=\"System.Threading.ThreadAbortException\" />\r\n          <option name=\"timeStamp\" value=\"3\" />\r\n        </breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.idea.YetGimMvc/.idea/workspace.xml b/.idea/.idea.YetGimMvc/.idea/workspace.xml
+--- a/.idea/.idea.YetGimMvc/.idea/workspace.xml	(revision 559d053d576c0d0bf74b002204f5df26b8729706)
++++ b/.idea/.idea.YetGimMvc/.idea/workspace.xml	(date 1746778107120)
+@@ -31,6 +31,7 @@
+   <component name="Git.Settings">
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+   </component>
++  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+   <component name="ProjectColorInfo">{
+   &quot;associatedIndex&quot;: 7
+ }</component>
+@@ -179,6 +180,7 @@
+   <component name="TypeScriptGeneratedFilesManager">
+     <option name="version" value="3" />
+   </component>
++  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+   <component name="VcsManagerConfiguration">
+     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
