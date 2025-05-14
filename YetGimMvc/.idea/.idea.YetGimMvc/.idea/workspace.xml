@@ -12,30 +12,69 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="470abd8e-3483-45f8-aa15-5ff183997376" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ECommerce/DataAccess/Abstracts/ICategoryRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ECommerce/DataAccess/Concretes/EfCategoryRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ECommerce/Services/Abstracts/ICategoryService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ECommerce/Services/Concretes/CategoryService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ECommerce/Models/Category.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/Models/Category.cs" afterDir="false" />
+    <list default="true" id="470abd8e-3483-45f8-aa15-5ff183997376" name="Changes" comment="Mapping, CategoryService.cs">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.YetGimMvc/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.YetGimMvc/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/Controllers/ProductsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/Controllers/ProductsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/DataAccess/Abstracts/ICategoryRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/DataAccess/Abstracts/ICategoryRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/DataAccess/Abstracts/IProductRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/DataAccess/Abstracts/IProductRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/DataAccess/Concretes/EfCategoryRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/DataAccess/Concretes/EfCategoryRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/DataAccess/Concretes/EfProductRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/DataAccess/Concretes/EfProductRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/DataAccess/Contexts/BaseDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/DataAccess/Contexts/BaseDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/ECommerce.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/ECommerce.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/Models/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/Models/Entity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/Models/Product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/Models/Product.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/Services/Abstracts/ICategoryService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/Services/Abstracts/ICategoryService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/Services/Abstracts/IProductService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/Services/Abstracts/IProductService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/Services/Concretes/CategoryService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/Services/Concretes/CategoryService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/Services/Concretes/ProductService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/Services/Concretes/ProductService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/Views/Products/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/Views/Products/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/Views/_ViewImports.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/Views/_ViewImports.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/bin/Debug/net8.0/ECommerce.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/bin/Debug/net8.0/ECommerce.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ECommerce/bin/Debug/net8.0/ECommerce.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/bin/Debug/net8.0/ECommerce.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ECommerce/bin/Debug/net8.0/ECommerce.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/bin/Debug/net8.0/ECommerce.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ECommerce/bin/Debug/net8.0/ECommerce.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/bin/Debug/net8.0/ECommerce.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ECommerce/bin/Debug/net8.0/ECommerce.staticwebassets.runtime.json" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/bin/Debug/net8.0/ECommerce.staticwebassets.runtime.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/ECommerce.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/ECommerce.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/ECommerce.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/ECommerce.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/ECommerce.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/ECommerce.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/ECommerce.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/ECommerce.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/ECommerce.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/ECommerce.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/ECommerce.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/ECommerce.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/ECommerce.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/ECommerce.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/ECommerce.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/ECommerce.genruntimeconfig.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/ECommerce.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/ECommerce.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/ECommerce.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/ECommerce.sourcelink.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/ref/ECommerce.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/ref/ECommerce.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/refint/ECommerce.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/refint/ECommerce.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/staticwebassets.build.json" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/staticwebassets.build.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/staticwebassets.development.json" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/staticwebassets.development.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/staticwebassets.pack.json" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/obj/Debug/net8.0/staticwebassets.pack.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/obj/ECommerce.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/obj/ECommerce.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/obj/ECommerce.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/obj/ECommerce.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/obj/ECommerce.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/obj/ECommerce.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ECommerce/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/ECommerce/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YetGimMvc/Controllers/CarsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/YetGimMvc/Controllers/CarsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YetGimMvc/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/YetGimMvc/Controllers/HomeController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YetGimMvc/Models/Car.cs" beforeDir="false" afterPath="$PROJECT_DIR$/YetGimMvc/Models/Car.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YetGimMvc/Models/Customer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/YetGimMvc/Models/Customer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YetGimMvc/Models/ErrorViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/YetGimMvc/Models/ErrorViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YetGimMvc/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/YetGimMvc/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YetGimMvc/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/YetGimMvc/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YetGimMvc/Views/Cars/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/YetGimMvc/Views/Cars/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YetGimMvc/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/YetGimMvc/Views/Home/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YetGimMvc/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/YetGimMvc/Views/Shared/_Layout.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YetGimMvc/Views/_ViewImports.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/YetGimMvc/Views/_ViewImports.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YetGimMvc/obj/Debug/net8.0/YetGimMvc.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/YetGimMvc/obj/Debug/net8.0/YetGimMvc.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YetGimMvc/obj/Debug/net8.0/YetGimMvc.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/YetGimMvc/obj/Debug/net8.0/YetGimMvc.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YetGimMvc/obj/Debug/net8.0/YetGimMvc.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/YetGimMvc/obj/Debug/net8.0/YetGimMvc.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YetGimMvc/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/YetGimMvc/obj/Debug/net8.0/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YetGimMvc/obj/Debug/net8.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css" beforeDir="false" afterPath="$PROJECT_DIR$/YetGimMvc/obj/Debug/net8.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YetGimMvc/obj/Debug/net8.0/staticwebassets.build.json" beforeDir="false" afterPath="$PROJECT_DIR$/YetGimMvc/obj/Debug/net8.0/staticwebassets.build.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YetGimMvc/obj/Debug/net8.0/staticwebassets.development.json" beforeDir="false" afterPath="$PROJECT_DIR$/YetGimMvc/obj/Debug/net8.0/staticwebassets.development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YetGimMvc/obj/Debug/net8.0/staticwebassets.pack.json" beforeDir="false" afterPath="$PROJECT_DIR$/YetGimMvc/obj/Debug/net8.0/staticwebassets.pack.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YetGimMvc/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/YetGimMvc/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YetGimMvc/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/YetGimMvc/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,7 +241,8 @@
       <workItem from="1746608720782" duration="2954000" />
       <workItem from="1746771917823" duration="8543000" />
       <workItem from="1746781249176" duration="5000" />
-      <workItem from="1746781418648" duration="2516000" />
+      <workItem from="1746781418648" duration="2708000" />
+      <workItem from="1747203154389" duration="345000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -267,7 +307,8 @@
     <MESSAGE value="first commit" />
     <MESSAGE value="a" />
     <MESSAGE value="update EcomerceDb" />
-    <option name="LAST_COMMIT_MESSAGE" value="update EcomerceDb" />
+    <MESSAGE value="Mapping, CategoryService.cs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mapping, CategoryService.cs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

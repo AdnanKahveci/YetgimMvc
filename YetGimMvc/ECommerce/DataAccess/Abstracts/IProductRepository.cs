@@ -2,11 +2,7 @@
 
 namespace ECommerce.DataAccess.abstracts;
 
-public interface IProductRepository
+public interface IProductRepository : IRepository<Product,Guid>
 {
-    void Add(Product product);
-    void Update(Product product);
-    void Delete(Product product);
-    List<Product> GetAll();
-    Product? GetById(Guid id);
+    List<Product> GetAllByPriceRange(double min, double max);
 }

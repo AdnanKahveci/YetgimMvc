@@ -1,40 +1,54 @@
 ﻿using ECommerce.DataAccess.abstracts;
 using ECommerce.Models;
+using ECommerce.Models.Dtos.Categories;
 using ECommerce.Services.Abstracts;
 
 namespace ECommerce.Services.Concretes;
 
 public class CategoryService : ICategoryService
 {
-    private ICategoryRepository _categoryRepository;
+    private readonly ICategoryRepository _categoryRepository;
 
     public CategoryService(ICategoryRepository categoryRepository)
     {
         _categoryRepository = categoryRepository;
     }
-    public List<Category> GetAll()
+
+    public List<CategoryResponseDto> GetAll()
     {
-        return _categoryRepository.GetAll();
+        List<CategoryResponseDto> responses = new List<CategoryResponseDto>();
+        List<Category> categories = _categoryRepository.GetAll();
+
+        
+        foreach (Category category in categories)
+        {
+            CategoryResponseDto dto = new CategoryResponseDto()
+            {
+                Id = category.Id,
+                Name = category.Name,
+                Description = category.Description,
+            };
+            
+            responses.Add(dto);
+        }
+        return responses;
     }
 
-    public Category? GetById(Guid id)
+    public CategoryResponseDto GetById(int id)
     {
-        return _categoryRepository.GetById(id);
+        Category category = _categoryRepository
+            .Get(filter: x=>x.Id == id, include:false,tracking:false);
+        CategoryResponseDto dto = new CategoryResponseDto()
+        {
+            Id = category.Id,
+            Name = category.Name,
+            Description = category.Description,
+        };
+        return dto;
     }
 
     public void Add(Category category)
-    { 
-        _categoryRepository.Add(category);    
-    }
-
-    public void Update(Category category)
     {
-        _categoryRepository.Update(category);   
-    }
-
-    public void Delete(Guid id)
-    {
-        Category category = _categoryRepository.GetById(id);
-        _categoryRepository.Delete(category);   
+        _categoryRepository.Add(category);
     }
 }
